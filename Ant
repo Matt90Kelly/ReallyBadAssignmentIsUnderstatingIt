@@ -1,0 +1,51 @@
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
+
+
+public class Ant {
+  
+	Set<map> foodFound = new HashSet<map>();
+	static Set<map> food = new HashSet<map>();
+	public int steps = 0;
+	private boolean nested;
+	private Object Ant;
+	public int state;
+	public int ID;
+	
+	
+	public int getState() {
+		return state;
+	}
+
+	public void setState(int state) {
+		this.state = state;
+	}
+
+	public int getID() {
+		return ID;
+	}
+
+	public void setID(int iD) {
+		ID = iD;
+	}
+
+	public void death(){
+		Ant = food();
+		foodFound.clear();
+
+	}
+
+	private Object food() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	private static Set<map> getFood() {
+		// TODO Auto-generated method stub
+		return food;
+	}
+
+}
+
