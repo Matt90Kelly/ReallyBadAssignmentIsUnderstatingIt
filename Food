@@ -1,19 +1,42 @@
-
-public class Food {
-
-  public boolean isFood;
+package ANTGAME;
+import java.util.Random;
+/* ----------------------------------GROUP6----------------------------------
+ * Author M.K
+ * Monday 15th April 2013
+ * 
+ * This class creates a FOOD object which is carried by the ANT.
+ * 
+ * This class uses a random number to create different weight of food which will...
+ * ...be used in factoring the speed of the ants. The weight of the food affects...
+ * ...the value towards the winning amount.
+ * 
+ * This class is called by the GUI when the world is created.
+ * 
+ * If you edit this, please comment what you have changed and re-upload it please.
+ * ----------------------------------GROUP6----------------------------------
+ */
+public class FOOD {
 	
-	public Food(boolean isFood){
-		this.isFood = isFood;
+	Random random = new Random();
+	int value;
+	int xpos;
+	int ypos;
+	boolean ghost;
+	public FOOD(int x_pos, int y_pos) 
+	{
+		ghost = true;
+		int weight = random.nextInt(100);
+		value = weight/10;
+		xpos = x_pos;
+		ypos = y_pos;		
+	}
+	public int getValue()
+	{
+		return value;
+	}
+	public void setValue(int givenValue)
+	{
+		this.value = givenValue;
 	}
 
-	public boolean isFood() {
-		return isFood;
-	}
-
-	public void setFood(boolean isFood) {
-		this.isFood = isFood;
-	}
-	
-	
 }
