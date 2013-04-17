@@ -1,3 +1,71 @@
+package ANTGAME;
+
+public class PLAYER {
+	String name;
+	BRAIN brain;
+	int team;
+	int gamesWon;
+	int gamesLost;
+	
+	public PLAYER (String n, BRAIN b, int t)
+	{
+		this.name = n;
+		this.brain = b;
+		this.team = t;
+	}
+	
+	public String getName() 
+	{
+		return name;
+	}
+
+	public void setName(String name) 
+	{
+		this.name = name;
+	}
+
+	public int getTeam() 
+	{
+		return team;
+	}
+
+	public void setTeam(int team) 
+	{
+		this.team = team;
+	}
+
+	public BRAIN getBrain() 
+	{
+		return brain;
+	}
+
+	public int getGamesWon() 
+	{
+		return gamesWon;
+	}
+
+	public int getGamesLost() 
+	{
+		return gamesLost;
+	}
+
+	
+	public void setBrain(BRAIN brain) 
+	{
+		this.brain = brain;
+	}
+
+	public void setGamesWon(int gamesWon) 
+	{
+		this.gamesWon = gamesWon;
+	}
+	
+	public void setGamesLost(int gamesLost) 
+	{
+		this.gamesLost = gamesLost;
+	}
+
+}
 import java.awt.Color;
 
 
