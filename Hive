@@ -1,0 +1,20 @@
+//the ants base
+public class Hive {
+  
+	public String HiveID;
+
+	public Hive(String HiveID){
+		this.HiveID = HiveID;
+	}
+
+	public String getHiveID(){
+		return HiveID;
+	}
+
+	public String setHiveID(String HiveID){
+		return this.HiveID = HiveID;
+	}
+
+}
+
+
