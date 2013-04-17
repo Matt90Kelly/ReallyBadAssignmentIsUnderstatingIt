@@ -1,0 +1,4 @@
+
+public enum Senses {
+  friend,foe,friendWithFood,foeWithFood,food,rock,marker,unMarker,home,forHome
+}
