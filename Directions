@@ -1,0 +1,4 @@
+
+public enum Directions {
+  here,ahead,leftAhead,rigthAhead
+}
