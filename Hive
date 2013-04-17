@@ -1,20 +1,96 @@
-//the ants base
-public class Hive {
-  
-	public String HiveID;
-
-	public Hive(String HiveID){
-		this.HiveID = HiveID;
+package ANTGAME;
+import java.util.ArrayList;
+/* ----------------------------------GROUP6----------------------------------
+ * Author M.K
+ * Monday 15th April 2013
+ * 
+ * This class creates a HIVE object used to store food and to spawn the ants.
+ * 
+ * This class is called by the GUI class to create a hive, given its location...
+ * ...by the GUI class. It then returns a HIVE object to be used. 
+ * 
+ * If you edit this, please comment what you have changed and re-upload it please.
+ * ----------------------------------GROUP6----------------------------------
+ */
+public class HIVE 
+{
+	private BRAIN hiveMind;
+	int antsInside;
+	int hiveLimit;
+	private static int totalFood ;
+	int xLoc;
+	int yLoc;
+	boolean ghost;
+	int team; 
+	private static ArrayList<ANT> antsInHiveArray = new ArrayList<ANT>();
+	public HIVE hive(int x_coord, int y_coord, int givenTeam, BRAIN givenBrain)
+	{
+		this.hiveMind = givenBrain;
+		this.xLoc = x_coord;
+		this.yLoc = y_coord;
+		this.antsInside = 0;
+		totalFood = 0;
+		this.ghost = false;
+		this.team = givenTeam;
+		fillHive();
+		return this;
+	}
+	
+	/*This method will be called by the GUI once the teams(1-4) hives are made, using a...
+	 * ...loop depending on the size of the teamCount variable.
+	 */
+	private HIVE fillHive()
+	{
+		hiveLimit = 200;
+		for (int i = 0; i < hiveLimit; i++)
+		{
+			ANT ant = new ANT(i+1,this.team,0);
+			ant.xLoc = this.xLoc;
+			ant.yLoc = this.yLoc;
+			HIVE.getAntsInHiveArray().add(i, ant);
+		}
+		return this;
+	}
+	
+	public static void acceptANT(ANT antGiven, int i, int foodGiven)
+	{
+		getAntsInHiveArray().add(i, antGiven);
+		takeFood(i, foodGiven);
+	}
+	public static void sendANT()
+	{
+		if(getAntsInHiveArray().isEmpty())
+		{
+		    // Do something with the empty list here.
+		}
+		else 
+		{
+			ANT ant = getAntsInHiveArray().get(1);
+			WORLD.takeAntFromHive(ant, ant.antID);
+		}
+		
+	}
+	public static void takeFood(int antID, int foodValue)
+	{
+		int fwa = foodValue;
+		addFood(fwa);
 	}
 
-	public String getHiveID(){
-		return HiveID;
+	public static ArrayList<ANT> getAntsInHiveArray() {
+		return antsInHiveArray;
 	}
 
-	public String setHiveID(String HiveID){
-		return this.HiveID = HiveID;
+	public static void setAntsInHiveArray(ArrayList<ANT> antsInHiveArray) {
+		HIVE.antsInHiveArray = antsInHiveArray;
 	}
+
+	public static int getTotalFood() {
+		return totalFood;
+	}
+
+	public static void addFood(int food) {
+		HIVE.totalFood =+ totalFood;
+	}
+
 
 }
-
-
