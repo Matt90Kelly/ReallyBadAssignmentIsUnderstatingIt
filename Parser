@@ -1,0 +1,71 @@
+
+public class Parser {
+  
+	private Instructions instructions;
+	private Turn turn;
+	private Directions dir;
+	pivate int st1;
+	private int st2;
+	private Senses senses;
+	
+	public Parser(){
+		
+		instructions = null;
+		turn = null;
+		dir = null;
+		senses = null;
+		
+		//the comparision of the instructions enum here
+		
+	}
+
+	public Instructions getInstructions() {
+		return instructions;
+	}
+
+	public void setInstructions(Instructions instructions) {
+		this.instructions = instructions;
+	}
+
+	public Turn getTurn() {
+		return turn;
+	}
+
+	public void setTurn(Turn turn) {
+		this.turn = turn;
+	}
+
+	public Directions getDir() {
+		return dir;
+	}
+
+	public void setDir(Directions dir) {
+		this.dir = dir;
+	}
+
+	public int getSt1() {
+		return st1;
+	}
+
+	public void setSt1(int st1) {
+		this.st1 = st1;
+	}
+
+	public int getSt2() {
+		return st2;
+	}
+
+	public void setSt2(int st2) {
+		this.st2 = st2;
+	}
+
+	public Senses getSenses() {
+		return senses;
+	}
+
+	public void setSenses(Senses senses) {
+		this.senses = senses;
+	}
+	
+
+}
