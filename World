@@ -1,0 +1,102 @@
+import java.util.ArrayList;
+
+
+public class World {
+  
+	private boolean isHive;
+	private boolean isRock;
+	private boolean isFood;
+	private int foodCount;
+	private Ant ants;
+	//private ArrayList<Ant>ants;
+	private World[][]cells;
+	private int x;//height
+	private int y;//width
+	private Player playerID;
+
+	public World(World[][]cells, boolean isHive, Ant ants, Player playerID){
+		
+		this.cells = cells;
+		this.playerID = playerID;
+	}
+	
+	//another constructor for labelling the map
+	
+	public World (char data){
+		//this(false, ants, Player.Player1);
+		switch (data){
+		case '#':
+			isRock = true;
+			break;
+		case '+':
+			playerID = Player.Player1;
+			isHive = true;
+			break;
+		case'-':
+			playerID = Player.Player2;
+			isHive = true;
+			break;
+		case '.':
+			break;
+			
+		}
+			
+	}
+
+	public boolean isHive() {
+		return isHive;
+	}
+
+	public void setHive(boolean isHive) {
+		this.isHive = isHive;
+	}
+
+	public int getFoodCount() {
+		return foodCount;
+	}
+
+	public void setFoodCount(int foodCount) {
+		this.foodCount = foodCount;
+	}
+
+	public Ant getAnts() {
+		return ants;
+	}
+
+	public void setAnts(Ant ants) {
+		this.ants = ants;
+	}
+
+	public World[][] getCells() {
+		return cells;
+	}
+
+	public void setCells(World[][] cells) {
+		this.cells = cells;
+	}
+
+	public int getX() {
+		return x;
+	}
+
+	public void setX(int x) {
+		this.x = x;
+	}
+
+	public int getY() {
+		return y;
+	}
+
+	public void setY(int y) {
+		this.y = y;
+	}
+	
+	public boolean noAnt(){
+		if(ant = null){
+			return true;
+		}
+		}
+	}
+	
+	
+}
