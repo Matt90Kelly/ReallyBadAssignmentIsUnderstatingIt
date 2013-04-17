@@ -1,0 +1,18 @@
+
+public class Rock {
+
+  public boolean isRock;
+	
+	public boolean isRock() {
+		return isRock;
+	}
+
+	public void setRock(boolean isRock) {
+		this.isRock = isRock;
+	}
+
+	public Rock( boolean isRock){
+		this.isRock = isRock;
+	}
+	
+}
