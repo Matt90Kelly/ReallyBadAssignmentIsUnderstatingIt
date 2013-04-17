@@ -1,0 +1,5 @@
+
+public enum Instructions {
+  
+	sense,mark,unmark,pickUp,drop,turn,move,flip
+}
