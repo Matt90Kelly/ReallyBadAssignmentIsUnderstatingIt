@@ -1,0 +1,19 @@
+
+public class Food {
+
+  public boolean isFood;
+	
+	public Food(boolean isFood){
+		this.isFood = isFood;
+	}
+
+	public boolean isFood() {
+		return isFood;
+	}
+
+	public void setFood(boolean isFood) {
+		this.isFood = isFood;
+	}
+	
+	
+}
