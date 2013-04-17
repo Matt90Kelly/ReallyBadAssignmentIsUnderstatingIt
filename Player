@@ -1,0 +1,40 @@
+import java.awt.Color;
+
+
+public enum Player {
+  Player1(true),Player2(false);
+	
+	public boolean playerID;
+	
+	Player(boolean pID){
+		this.playerID = pID;
+	}
+
+	public boolean isPlayerID() {
+		return playerID;
+	}
+
+	public void setPlayerID(boolean playerID) {
+		this.playerID = playerID;
+	}
+	
+	public void setColor(){
+		if(true){
+			Color playerID = Color.black;
+		}
+		else{
+			Color playerID = Color.red;
+		}
+	}
+	
+	public Player getPlayer(){
+		if (playerID){
+			return Player1;
+		}
+		else{
+			return Player2;
+		}
+	}
+
+
+}
